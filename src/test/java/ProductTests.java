@@ -79,7 +79,7 @@ class ProductTests {
     }
 
     @Test
-    void checkEmptyProductKeywords() {
+    void checkKeyWordsNotFound() {
         Product productWithNullKeyWords = new Product();
         Product productWithEmptyKeyWords = new Product();
         ProductService productService = new ProductService();
@@ -90,7 +90,7 @@ class ProductTests {
     }
 
     @Test
-    void checkUnableToFindLevel() {
+    void checkLevelNotFound() {
         ProductService productService = new ProductService();
         assertThrows(LevelNotFoundException.class, () -> productService.getProductLevel(null));
     }
